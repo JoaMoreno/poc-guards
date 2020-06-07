@@ -29,7 +29,6 @@ export class CpanelComponent implements OnInit {
 
   setStatus(){
     this._guardService.setUserStatus(this.options);
-    this.getStatus()
   }
 
 }

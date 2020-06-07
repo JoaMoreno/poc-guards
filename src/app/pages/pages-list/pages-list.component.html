@@ -1,0 +1,8 @@
+<div class="routes-container">
+    <ng-container *ngFor="let route of routesList | slice:2">
+       <div (click)="redirecTo(route.path)" class="route-item">
+            {{route.path}}
+       </div>
+    </ng-container>
+
+</div>    

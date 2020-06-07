@@ -18,3 +18,9 @@
       transform: translate(80px,-120px);
       z-index: 999;   
   }
+.pages-list-container{
+  position: relative;
+  .page-list{
+    position: absolute;
+  }
+}

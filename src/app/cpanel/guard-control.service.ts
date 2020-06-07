@@ -20,7 +20,7 @@ export class GuardControlService {
   constructor() {
     // Initialization
     this.isLogged = false
-    this.userType = 'admin'
+    this.userType = 'public'
     this.role = 'regular'
    }
 
@@ -37,15 +37,8 @@ export class GuardControlService {
     this.userType = options.userType;
     this.role = options.role;
   }
-
-  getStatusIsLogged = ()=> this.isLogged;
-  getStatusUserType = ()=> this.userType;
-  getStatusRole     = ()=> this.role;
-
-  toggleLoggedStatus(){
-    this.isLogged = !this.isLogged
-  }
-  setUserType(type : UserType){
-    this.userType = type
-  }
+  // Getters
+  get statusIsLogged() { return this.isLogged }
+  get statusUserType() { return this.userType }
+  get statusRole() { return this.role }
 }
