@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="cpanel pt-3">
+        <h1 class="text-center p-3">Guards Control</h1>
+        <!-- Form Radio -->
+        <div class="mx-5 form-container">
+            <mat-slide-toggle (change)="setStatus()" [(ngModel)]="options.isLogged">Is Logged?</mat-slide-toggle>
+            <label class="mt-3" style="margin-bottom: -5px;">User</label>
+            <mat-radio-group (change)="setStatus()" [disabled]="!options.isLogged" [(ngModel)]="options.userType" class="radio-group ml-3">
+                <mat-radio-button value="admin">Admin</mat-radio-button>
+                <mat-radio-button value="standar">Standar</mat-radio-button>
+                <mat-radio-button value="public">Public</mat-radio-button>
+            </mat-radio-group>
+            <label class="mt-3" style="margin-bottom: -5px;">Role</label>
+            <mat-radio-group (change)="setStatus()" [(ngModel)]="options.role" class="radio-group ml-3" aria-label="Select a Role">
+                <mat-radio-button value="regular">Regular</mat-radio-button>
+                <mat-radio-button value="deudor">Deudor</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+    </div>
+</div>

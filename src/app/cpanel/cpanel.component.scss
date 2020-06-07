@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    .cpanel{
+        .form-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+          }
+    }
+}
