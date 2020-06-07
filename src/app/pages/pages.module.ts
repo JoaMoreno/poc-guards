@@ -6,13 +6,14 @@ import { PagesListComponent } from './pages-list/pages-list.component';
 import { AdminComponent } from './admin/admin.component';
 import { ErrorComponent } from './error/error.component';
 import { RegularComponent } from './regular/regular.component';
+import { StandarComponent } from './standar/standar.component';
 
 const COMPONENTS =[
   HomeComponent,
   PagesListComponent
 ]
 @NgModule({
-  declarations: [COMPONENTS, AdminComponent, ErrorComponent, RegularComponent],
+  declarations: [COMPONENTS, AdminComponent, ErrorComponent, RegularComponent, StandarComponent],
   imports: [
     CommonModule,
     AppRoutingModule

@@ -1,8 +1,16 @@
 <div class="routes-container">
+    <h1>Navigate</h1>
     <ng-container *ngFor="let route of routesList | slice:2">
-       <div (click)="redirecTo(route.path)" class="route-item">
+        <div (click)="redirecTo(route.path)" class="route-item">
             {{route.path}}
-       </div>
+        </div>
+        <ng-container *ngIf="route.children">
+            <ng-container *ngFor="let children of route.children">
+                <div (click)="redirecTo(route.path+'/'+children.path)" class="route-item route-item--children">
+                    {{children.path}}
+                </div>
+            </ng-container>
+        </ng-container>
     </ng-container>
 
-</div>    
+</div>

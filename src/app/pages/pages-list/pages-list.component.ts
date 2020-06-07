@@ -15,6 +15,7 @@ export class PagesListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.routesList);
     
   }
 

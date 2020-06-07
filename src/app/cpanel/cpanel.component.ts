@@ -31,4 +31,11 @@ export class CpanelComponent implements OnInit {
     this._guardService.setUserStatus(this.options);
   }
 
+  get userTypeValid(){
+    return this.options.userType === 'admin' || this.options.userType === 'standar'
+  }
+  get roleForm(){
+    return this.options.isLogged && this.userTypeValid
+  }
+
 }
