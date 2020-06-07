@@ -19,6 +19,7 @@ export class ErrorComponent implements OnInit {
   accessMap = {
     L: ["logged"],
     LA: ["logged","admin"],
+    LS: ["logged","standar"],
     LR: ["logged","standar","regular"],
     LD: ["logged","standar","deudor"]
   }
