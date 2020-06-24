@@ -18,7 +18,7 @@ export class AdminGuard implements CanActivate {
         return true;
       } else {
         console.log('Auth false');
-        this.router.navigate(["/error",{access:'LA'}]);
+        this.router.navigate(["/error",{access:'A'}]);
       }
   }
 }

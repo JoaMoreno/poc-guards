@@ -11,7 +11,7 @@ export class RegularGuard implements CanLoad {
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-      if (this._guardService.statusRole==='regular') {
+      if (this._guardService.statusRole === 'regular' || this._guardService.statusUserType === 'admin') {
         return true;
       } else {
         this.router.navigate(["/error",{access:'LR'}]);

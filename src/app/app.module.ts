@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { PagesModule } from './pages/pages.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

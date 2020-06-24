@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-type UserType = 'admin'|'standar'|'public'
+type UserType = 'admin'|'standard'
 type Role = 'deudor'|'regular'
 export interface OptionsUserStatus {
   isLogged: boolean
@@ -20,7 +20,7 @@ export class GuardControlService {
   constructor() {
     // Initialization
     this.isLogged = false
-    this.userType = 'public'
+    this.userType = 'admin'
     this.role = 'regular'
    }
 

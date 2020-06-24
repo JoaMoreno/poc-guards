@@ -11,7 +11,7 @@ export class DeudorGuard implements CanLoad {
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-      if (this._guardService.statusRole==='deudor') {
+      if (this._guardService.statusRole === 'deudor' || this._guardService.statusUserType === 'admin') {
         return true;
       } else {
         this.router.navigate(["/error",{access:'LD'}]);

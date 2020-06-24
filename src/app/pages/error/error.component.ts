@@ -17,11 +17,12 @@ export class ErrorComponent implements OnInit {
   requiredAccess: []
 
   accessMap = {
+    A: ["admin"],
     L: ["logged"],
     LA: ["logged","admin"],
-    LS: ["logged","standar"],
-    LR: ["logged","standar","regular"],
-    LD: ["logged","standar","deudor"]
+    LS: ["logged","standard"],
+    LR: ["logged","standard","regular"],
+    LD: ["logged","standard","deudor"]
   }
 
   setAccessRequired(){ 

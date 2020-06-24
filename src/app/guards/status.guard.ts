@@ -6,10 +6,10 @@ import { GuardControlService } from '../cpanel/guard-control.service';
 @Injectable({
   providedIn: 'root'
 })
-export class RolesGuard implements CanActivate {
+export class StatusGuard implements CanActivate {
   constructor(private _guardService : GuardControlService, private router: Router) {}
   get userStatus(){
-    return this._guardService.statusUserType === 'standar' || this._guardService.statusUserType === 'admin'
+    return this._guardService.statusUserType === 'standard' || this._guardService.statusUserType === 'admin'
   }
   get roleStatus(){
     return this._guardService.statusRole === 'deudor' || this._guardService.statusRole === 'regular'

@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate,CanActivateChild {
   constructor(private _guardService : GuardControlService, private router: Router) {}
 
   get userStatus(){
-    return this._guardService.statusUserType === 'standar' || this._guardService.statusUserType === 'admin'
+    return this._guardService.statusUserType === 'standard' || this._guardService.statusUserType === 'admin'
   }
 
   canActivate(

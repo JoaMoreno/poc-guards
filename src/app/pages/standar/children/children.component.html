@@ -1,0 +1,7 @@
+<div class="pt-5 col-3 container">
+    <div class="form-group">
+        <label for="msg">Mensaje:</label>
+        <textarea class="form-control" id="msg" (input)="msg = $event.target.value"></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="send()">Enviar</button>
+</div>

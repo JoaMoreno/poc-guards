@@ -32,7 +32,7 @@ export class CpanelComponent implements OnInit {
   }
 
   get userTypeValid(){
-    return this.options.userType === 'admin' || this.options.userType === 'standar'
+    return this.options.userType === 'standard'
   }
   get roleForm(){
     return this.options.isLogged && this.userTypeValid
