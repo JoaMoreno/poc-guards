@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges, DoCheck } from '@angular/core';
 import {  ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,11 +6,13 @@ import {  ActivatedRoute } from '@angular/router';
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss']
 })
-export class ErrorComponent implements OnInit {
+export class ErrorComponent implements DoCheck {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+  ngDoCheck() {
     this.setAccessRequired()
   }
 
