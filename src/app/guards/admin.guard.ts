@@ -13,11 +13,11 @@ export class AdminGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if (this._guardService.statusUserType === 'admin') {
-        console.log('Auth true');
+        console.log('[canActivate] - User Admin true ');
         
         return true;
       } else {
-        console.log('Auth false');
+        console.log('[canActivate ]- User Admin false ');
         this.router.navigate(["/error",{access:'A'}]);
       }
   }

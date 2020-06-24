@@ -16,13 +16,15 @@ export class ChildrenComponent implements PuedeDesactivar {
   send(){
     alert('Mensaje enviado: ' + this.msg);
     this.sended = true;
+    console.log('[CanDeactivate] - ', true);
   }
 
   permitirSalirDeRuta(){
     if(!this.msg || this.sended){
-      return true
+      return true;
     }
     const confirm = window.confirm('Seguro que querés salir? Perderás todos los cambios');
+    console.log('[CanDeactivate] - ', confirm);
     return confirm
   }
 

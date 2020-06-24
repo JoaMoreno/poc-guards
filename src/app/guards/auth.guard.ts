@@ -17,11 +17,11 @@ export class AuthGuard implements CanActivate,CanActivateChild {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if (this._guardService.statusIsLogged) {
-        console.log('Auth true');
+        console.log('[canActivate] - Logged true');
         
         return true;
       } else {
-        console.log('Auth false');
+        console.log('[canActivate] - Logged false');
         this.router.navigate(["/error",{access:'L'}]);
         return false
       }
@@ -30,11 +30,11 @@ export class AuthGuard implements CanActivate,CanActivateChild {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if (this._guardService.statusIsLogged && this.userStatus) {
-        console.log('Auth true');
-        
+        console.log('[canActivateChild] - Logged true');
         return true;
+
       } else {
-        console.log('Auth false');
+        console.log('[canActivateChild] - Logged false');
         this.router.navigate(["/error",{access:'LS'}]);
         return false
       }

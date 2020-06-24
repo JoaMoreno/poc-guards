@@ -7,7 +7,7 @@
             <label class="mt-3" style="margin-bottom: -5px;">Usuario</label>
             <mat-radio-group (change)="setStatus()" [disabled]="!options.isLogged" [(ngModel)]="options.userType" class="radio-group ml-3">
                 <mat-radio-button value="admin">Admin</mat-radio-button>
-                <mat-radio-button value="standard">Usuario</mat-radio-button>
+                <mat-radio-button value="standard">Cliente</mat-radio-button>
                 <!-- <mat-radio-button value="public">Public</mat-radio-button> -->
             </mat-radio-group>
             <label class="mt-3" style="margin-bottom: -5px;">Estado</label>

@@ -18,4 +18,14 @@ export class RegularGuard implements CanLoad {
         return false
       }
   }
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      if (this._guardService.statusRole === 'regular' || this._guardService.statusUserType === 'admin') {
+        return true;
+      } else {
+        this.router.navigate(["/error",{access:'LR'}]);
+        return false
+      }
+  }
 }

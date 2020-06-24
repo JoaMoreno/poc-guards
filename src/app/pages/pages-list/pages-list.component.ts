@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {routes} from '../../app-routing.module'
 import { Router } from '@angular/router';
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './pages-list.component.html',
   styleUrls: ['./pages-list.component.scss']
 })
-export class PagesListComponent implements OnInit {
+export class PagesListComponent {
 
   routesList = routes
 
@@ -14,10 +14,6 @@ export class PagesListComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.routesList);
-    
-  }
 
   redirecTo(url:string){
     this.router.navigateByUrl(`/${url}`)

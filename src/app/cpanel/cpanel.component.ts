@@ -22,7 +22,6 @@ export class CpanelComponent implements OnInit {
     this._guardService.userStatus().subscribe(
       (res)=> {
         this.options = res;
-        console.log(this.options);
       }
     )
   }
