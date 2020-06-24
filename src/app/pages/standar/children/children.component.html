@@ -1,9 +1,14 @@
 <div class="text-center">
-    <div class="pt-5 col-3 container">
+    <div class="col-3 container">
         <div class="form-group">
             <label for="msg">Mensaje:</label>
             <textarea class="form-control" id="msg" (input)="msg = $event.target.value"></textarea>
         </div>
         <button class="btn btn-primary" (click)="send()">Enviar</button>
     </div>
+</div>
+<div class="card px-3 mt-2 text-center">
+    <h2>CanDeactivate</h2>
+    <p>Mira si el usuario puede salir de una página, podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar.</p>
+    <p>Si el guard devuelve verdadero, la navegación continuará. Sino, se cancelará la navegación.</p>
 </div>
