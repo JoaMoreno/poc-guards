@@ -1,6 +1,7 @@
 .access-container{
     display: flex;
     justify-content: center;
+    transition: all .5s;
     .access-item{
         display: flex;
         align-items: center;
@@ -8,30 +9,47 @@
         width: 100px;
         height: 100px;
         margin: 10px;
+        border-radius: 5px;
     }
     .access-logged{
         font-size: large;
         color: rgb(50, 205, 58);
+        background: rgba(50, 205, 58, 0.102);
         border: 1px solid rgb(50, 205, 58);
+        animation: slideDown .5s ease;
     }
     .access-admin{
         font-size: large;
         color: rgb(236, 41, 41);
         border: 1px solid rgb(236, 41, 41);
+        animation: slideDown .5s ease;
     }
     .access-standar{
         font-size: large;
         color: rgb(246, 166, 18);
         border: 1px solid rgb(246, 166, 18);
+        animation: slideDown .5s ease;
     }
     .access-regular{
         font-size: large;
         color: rgb(71, 18, 246);
         border: 1px solid rgb(71, 18, 246);
+        animation: slideDown .5s ease;
     }
     .access-deudor{
         font-size: large;
         color: rgb(246, 18, 113);
         border: 1px solid rgb(246, 18, 113);
+        animation: slideDown .5s ease;
     }
 }
+@keyframes slideDown{
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
